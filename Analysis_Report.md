@@ -1,6 +1,9 @@
 ﻿# Supply Chain Analysis
 
 ## Introduction 
+
+This dataset is downloaded from Internet. I can assume it is generated from an e-commerce company. Private infomation have already been preprocessed. After a glance of the data, I found all features could be divided into three groups. Customer related, Order related and Product related. Some variables have similar meanings, so correlation analysis will be included in the following EDA step.
+
 - Fields Decription
 ![| Fields | Description  |
 |--|--|
@@ -10,7 +13,7 @@ This dataset is downloaded from Internet. I can assume it is generated from an e
 
 Then I asked myself: what can I do with this dataset? 
 
-Then here came my first goal. Costomer is always the main focus of e-commerce companies. So, I used a FRM model to make customer segmentation in terms of customer value.
+Then here came my first goal. Customer is always the main focus of e-commerce companies. So, I used a FRM model to make customer segmentation in terms of customer value.
 
 ## EDA 
 
@@ -28,20 +31,7 @@ sc.head()
 
     (180519, 53)
     
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -306,20 +296,6 @@ customer_seg = sc.groupby('Customer Id').agg({'order date (DateOrders)': lambda 
 customer_seg.rename(columns={'order date (DateOrders)': 'R_value','Order Id': 'F_value', 'Sales': 'M_value'}, inplace=True)
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -364,20 +340,7 @@ customer_seg['M_score'] = customer_seg['M_value'].apply(FM_score, args=('M_value
 customer_seg['Customer Segmentation'] = customer_seg.apply(RFM_User, axis=1)
 customer_seg.head(10)
 ```
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -600,20 +563,7 @@ re = pd.DataFrame({'Models':models,'Accuracy':accuracy,'Recall':recall,'F1 Score
     [[35157   631]
      [  145   170]]
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">

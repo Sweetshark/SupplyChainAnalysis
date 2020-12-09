@@ -238,7 +238,8 @@ sc.drop(features, axis=1, inplace=True)
 
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201209213441818.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N3ZWV0c2hhcms=,size_16,color_FFFFFF,t_70#pic_center)
 
-5. group by time
+4. group by time
+
 	Use time as an example:
 ```python
 # generate year, month, weekday, hour, month year

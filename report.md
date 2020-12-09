@@ -286,19 +286,7 @@ customer_seg = sc.groupby('Customer Id').agg({'order date (DateOrders)': lambda 
 customer_seg.rename(columns={'order date (DateOrders)': 'R_value','Order Id': 'F_value', 'Sales': 'M_value'}, inplace=True)
 ```
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>
@@ -580,19 +568,7 @@ re = pd.DataFrame({'Models':models,'Accuracy':accuracy,'Recall':recall,'F1 Score
     [[35157   631]
      [  145   170]]
 
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
 </style>
 <table border="1" class="dataframe">
   <thead>

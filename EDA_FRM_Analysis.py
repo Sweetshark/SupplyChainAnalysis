@@ -203,7 +203,7 @@ negative['Category Name'].value_counts().nlargest(10).plot.bar(figsize=(8, 6),
 # 2. by region
 negative['Order Region'].value_counts().nlargest(10).plot.bar(figsize=(8, 6),
                                                               title='Top10 Regions with Negative Profits')
-# 总损失
+# Total loss
 print('Total Negative profits: ', negative['Order Profit Per Order'].sum())
 
 # explore fraud orders
@@ -242,7 +242,7 @@ plt.show()
 # MarySmith is suspect
 total = sc[sc['Customer Full Name'] == 'MarySmith']['Sales'].sum()
 fraud = suspected_fraud[suspected_fraud['Customer Full Name'] == 'MarySmith']['Sales'].sum()
-print('MarySmith购买金额总数：', total, 'MarySmith疑似欺诈的购买金额：', fraud)
+print('MarySmith total sales：', total, 'MarySmith fraud order sales：', fraud)
 
 
 # explore late delivery

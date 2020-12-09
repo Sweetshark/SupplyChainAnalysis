@@ -11,7 +11,7 @@ This dataset is downloaded from Internet. I can assume it is generated from an e
 
 Then I asked myself: what can I do with this dataset? 
 
-Then here came my first goal. Costomer is always the main focus of e-commerce companies. So, I used a FRM model to make customer segmentation in terms of customer value.
+Then here came my first goal. Customer is always the main focus of e-commerce companies. So, I used a FRM model to make customer segmentation in terms of customer value.
 
 ## EDA 
 

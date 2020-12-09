@@ -294,7 +294,7 @@ current = datetime.datetime(2018, 2, 1)
 # print(current)
 
 # 2.Define recency as the difference between the date of  last order and today: R_value
-# Calculate the number orders and the total sales as Frequency and Monetary Value: M_Value, R_Value
+# Calculate the number orders and the total sales as Frequency and Monetary Value: F_Value, M_Value
 customer_seg = sc.groupby('Customer Id').agg({'order date (DateOrders)': lambda x: (current - x.max()).days,'Order Id': lambda x: len(x), 'Sales': lambda x: x.sum()})
 customer_seg.rename(columns={'order date (DateOrders)': 'R_value','Order Id': 'F_value', 'Sales': 'M_value'}, inplace=True)
 ```

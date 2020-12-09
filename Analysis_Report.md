@@ -12,7 +12,7 @@ This dataset is downloaded from Internet. I can assume it is generated from an e
 
 Then I asked myself: what can I do with this dataset? 
 
-Then here came my first goal. Customer is always the main focus of e-commerce companies. So, I used a FRM model to make customer segmentation in terms of customer value.
+Then here came my first goal. Customer is always the main focus of e-commerce companies. So, I used a RFM model to make customer segmentation in terms of customer value.
 
 ## EDA 
 
@@ -266,7 +266,7 @@ order_hour['Sales'].mean().plot(title='Average Sales in Each Hour')
 ```
 ![在这里插入图片描述](https://img-blog.csdnimg.cn/20201208113322369.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N3ZWV0c2hhcms=,size_16,color_FFFFFF,t_70#pic_center)
 
-## FRM Model
+## RFM Model
 What Is Recency, Frequency, Monetary Value (RFM)?
 Recency, frequency, monetary value is a marketing analysis tool used to identify a company's or an organization's best customers by using certain measures. The RFM model is based on three quantitative factors:
 1. Recency: How recently a customer has made a purchase

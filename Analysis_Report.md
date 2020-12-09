@@ -9,7 +9,6 @@ This dataset is downloaded from Internet. I can assume it is generated from an e
 |--|--|
 | Type | Type of transaction made |](https://img-blog.csdnimg.cn/20201207211937245.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3N3ZWV0c2hhcms=,size_30,color_FFFFFF,t_70)
 
-This dataset is downloaded from Internet. I can assume it is generated from an e-commerce company. Private infomation have already been preprocessed. After a glance of the data, I found all features could be divided into three groups. Customer related, Order related and Product related. Some variables have similar meanings, so correlation analysis will be included in the following EDA step.
 
 Then I asked myself: what can I do with this dataset? 
 

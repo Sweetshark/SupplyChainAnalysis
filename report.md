@@ -286,8 +286,6 @@ customer_seg = sc.groupby('Customer Id').agg({'order date (DateOrders)': lambda 
 customer_seg.rename(columns={'order date (DateOrders)': 'R_value','Order Id': 'F_value', 'Sales': 'M_value'}, inplace=True)
 ```
 
-
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -332,20 +330,7 @@ customer_seg['M_score'] = customer_seg['M_value'].apply(FM_score, args=('M_value
 customer_seg['Customer Segmentation'] = customer_seg.apply(RFM_User, axis=1)
 customer_seg.head(10)
 ```
-<div>
-<style scoped>
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
 
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
@@ -569,7 +554,6 @@ re = pd.DataFrame({'Models':models,'Accuracy':accuracy,'Recall':recall,'F1 Score
      [  145   170]]
 
 
-</style>
 <table border="1" class="dataframe">
   <thead>
     <tr style="text-align: right;">
